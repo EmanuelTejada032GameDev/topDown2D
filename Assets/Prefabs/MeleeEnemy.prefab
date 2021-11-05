@@ -110,6 +110,18 @@ MonoBehaviour:
   speed: 20
   damage: 1
   timeBetweenAttacks: 3
+  pickUpChance: 20
+  pickups:
+  - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 2887073889942186914, guid: 519e58bb97dda4f4eaa6e3a2b53ce024, type: 3}
+  - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 2887073889942186914, guid: 519e58bb97dda4f4eaa6e3a2b53ce024, type: 3}
+  - {fileID: 2887073889942186914, guid: 519e58bb97dda4f4eaa6e3a2b53ce024, type: 3}
   stopDistance: 10
   attackSpeed: 8
 --- !u!1 &2168764152520950355

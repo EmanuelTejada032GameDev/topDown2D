@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2135395813334168589}
   m_Layer: 0
   m_Name: defautWeapon 1
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,4 +128,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 8997319149675849030, guid: 3053b6ac19c14924284f37c4f44254c3, type: 3}
   firePoint: {fileID: 2135395814230445689}
-  timeBetweenShots: 2
+  timeBetweenShots: 0.5

@@ -48,7 +48,15 @@ public class Player : MonoBehaviour
         health -= damageAmount;
         if (health <= 0)
         {
+            Debug.Log("wasted");
             Destroy(gameObject);
         }
+    }
+
+    public void ChangeWeapon(Weapon weaponToEquip)
+    {
+        Destroy(GameObject.FindGameObjectWithTag("Weapon"));
+        Instantiate(weaponToEquip, transform.position, transform.rotation, transform);
+
     }
 }

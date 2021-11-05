@@ -36,7 +36,7 @@ public class Summoner : Enemy
 
     private void Update()
     {
-        Debug.Log(Time.time);
+        
         if(player != null)
         {
             if(Vector2.Distance(transform.position, _targetPosition) > .5f)
