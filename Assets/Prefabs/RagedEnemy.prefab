@@ -215,6 +215,7 @@ MonoBehaviour:
   - {fileID: 4317986899720108222, guid: 16252142ab8f16e43b66af2cd5bb299d, type: 3}
   - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
   - {fileID: 1122994670131970512, guid: 0c1f1ff264acae1459b6c6efa9d157c1, type: 3}
+  - {fileID: 3771270296562223323, guid: 5c18463762823694c91c893d36fc0b7e, type: 3}
   stopDistance: 10
   shotPoint: {fileID: 5938300442356710984}
   enemyBullet: {fileID: 636094860031790447, guid: ecffafb1b7361ad4faaa182c91a780dd, type: 3}

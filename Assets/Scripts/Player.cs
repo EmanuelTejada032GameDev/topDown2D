@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
     public float speed;
-    public float health;
+    public int health;
 
     private Rigidbody2D _rigidBody;
     private Vector2 _movementAmount;
     private Animator _animator;
+
+    public Image[] hearts;
+    public Sprite fullHeartUI;
+    public Sprite emptyHeartUI;
+
 
     private void Awake()
     {
@@ -36,6 +43,8 @@ public class Player : MonoBehaviour
         {
             _animator.SetBool("isRunning", false);
         }
+
+       
     }
 
     private void FixedUpdate()
@@ -46,6 +55,7 @@ public class Player : MonoBehaviour
     public void takeDamage(int damageAmount)
     {
         health -= damageAmount;
+        UpdateHealthUI(health);
         if (health <= 0)
         {
             Debug.Log("wasted");
@@ -58,5 +68,34 @@ public class Player : MonoBehaviour
         Destroy(GameObject.FindGameObjectWithTag("Weapon"));
         Instantiate(weaponToEquip, transform.position, transform.rotation, transform);
 
+    }
+
+    public void UpdateHealthUI(int currentHealth)
+    {
+        for(int i = 0;i < hearts.Length; i++)
+        {
+            if(i < currentHealth)
+            {
+                hearts[i].sprite = fullHeartUI;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeartUI;
+            }
+        }
+
+    }
+
+    public void Heal(int healthAmount)
+    {
+        if(health + healthAmount > 5)
+        {
+            health = 5;
+        }
+        else
+        {
+            health += healthAmount;
+        }
+        UpdateHealthUI(health);
     }
 }
