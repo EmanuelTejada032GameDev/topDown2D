@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310508025771636}
   - component: {fileID: 7304310508025771637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310508193956643}
   - component: {fileID: 7304310508193956640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leftArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310508261049706}
   - component: {fileID: 7304310508261049707}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310508758490163}
   - component: {fileID: 7304310508758490160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310508822847280}
   - component: {fileID: 7304310508822847281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310508980880951}
   - component: {fileID: 7304310508980880948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310509733443776}
   - component: {fileID: 7304310509733443777}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310509788688103}
   - component: {fileID: 7304310509788688100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rightArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -671,9 +671,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310509839951894}
   - component: {fileID: 7304310509839951895}
-  m_Layer: 0
+  - component: {fileID: -58788678016870206}
+  - component: {fileID: -1813628900586298987}
+  - component: {fileID: 6120657296205063704}
+  m_Layer: 9
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -715,6 +718,73 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-58788678016870206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7304310509839951897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a3356f404ff5047af90d25553479de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  enemies:
+  - {fileID: 3014514795921876197, guid: 7790e95eca0751f4494d801a86be0cc9, type: 3}
+  - {fileID: 2168764152300138815, guid: b5c505f36173a414ca9611f51aff9365, type: 3}
+  - {fileID: -3648477000088489652, guid: 49534c9ca537c894e865d978cfa5dcb1, type: 3}
+  - {fileID: 5938300442015123151, guid: 08f4525ab5e0e9248bf0877e00658c2b, type: 3}
+  spawnOffset: 20
+  damage: 1
+--- !u!50 &-1813628900586298987
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7304310509839951897}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &6120657296205063704
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7304310509839951897}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -16.546066, y: 3.1265545}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2798023, y: 9.679689}
+  m_EdgeRadius: 0
 --- !u!1 &7304310509884118180
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304310509884118181}
   - component: {fileID: 7304310509884118178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
