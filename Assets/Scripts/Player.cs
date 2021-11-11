@@ -16,7 +16,9 @@ public class Player : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeartUI;
     public Sprite emptyHeartUI;
-
+    public Animator hurtPanelAnimator;
+    public GameObject gettingHitSound;
+    public GameObject deathSound;
 
     private void Awake()
     {
@@ -54,10 +56,14 @@ public class Player : MonoBehaviour
 
     public void takeDamage(int damageAmount)
     {
+        _animator.SetTrigger("damage");
+        hurtPanelAnimator.SetTrigger("hurt");
+        Instantiate(gettingHitSound, transform.position, transform.rotation);
         health -= damageAmount;
         UpdateHealthUI(health);
         if (health <= 0)
         {
+            Instantiate(deathSound, transform.position, transform.rotation);
             Debug.Log("wasted");
             Destroy(gameObject);
         }

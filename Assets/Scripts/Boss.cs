@@ -11,6 +11,7 @@ public class Boss : MonoBehaviour
     private int halfHealth;
     private Animator _animator;
     public int damage;
+    public GameObject deathEffect;
     private void Start()
     {
         halfHealth = health / 2;
@@ -22,6 +23,7 @@ public class Boss : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("wasted");
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 

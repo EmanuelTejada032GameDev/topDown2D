@@ -99,6 +99,7 @@ MonoBehaviour:
   speed: 30
   lifeTime: 1
   explosion: {fileID: 872343151078458680, guid: 9afe3162b2858eb4b9d7d14e37de25dd, type: 3}
+  projectileSound: {fileID: 5176242613739960099, guid: 84b12fbd17e8221468764b4b1b48d8e0, type: 3}
   damage: 1
 --- !u!61 &-1668681803456769139
 BoxCollider2D:

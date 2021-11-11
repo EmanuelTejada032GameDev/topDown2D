@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
 
     public int pickUpChance;
     public GameObject[] pickups;
+    public GameObject deathEffect;
+    public GameObject deathSound;
 
 
     public virtual void Start()
@@ -26,12 +28,15 @@ public class Enemy : MonoBehaviour
         health -= damageAmount;
         if(health <= 0)
         {
+            Instantiate(deathSound, transform.position, transform.rotation);
             int randomNumber = Random.Range(0, 101);
             if(randomNumber < pickUpChance)
             {
                 GameObject randomPickup = pickups[Random.Range(0, pickups.Length)];
                 Instantiate(randomPickup, transform.position, transform.rotation);
+               
             }
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

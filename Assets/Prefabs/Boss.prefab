@@ -738,6 +738,7 @@ MonoBehaviour:
   - {fileID: 5938300442015123151, guid: 08f4525ab5e0e9248bf0877e00658c2b, type: 3}
   spawnOffset: 20
   damage: 1
+  deathEffect: {fileID: 8396872659871031985, guid: 6a2ea2b0ec0699e4baf6ab19b2f156e3, type: 3}
 --- !u!50 &-1813628900586298987
 Rigidbody2D:
   serializedVersion: 4

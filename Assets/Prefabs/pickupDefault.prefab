@@ -123,3 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponToEquip: {fileID: 2135395813334168589, guid: 132cc6ced8065564fa44fb98060d34dd, type: 3}
+  pickupEffect: {fileID: 5416175841398715271, guid: 661ee7c851e221c41bb3ee45a2bb9906, type: 3}
+  pickupSound: {fileID: 1095916484516991724, guid: b8b9d3b04e722d8488fe6fe8ba43bab0, type: 3}

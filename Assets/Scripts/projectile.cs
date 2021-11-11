@@ -7,12 +7,14 @@ public class projectile : MonoBehaviour
     public float speed;
     public float lifeTime;
     public GameObject explosion;
+    public GameObject projectileSound;
 
     public int damage;
    
     void Start()
     {
         Invoke("DestroyProjectile", lifeTime);
+        Instantiate(projectileSound, transform.position, transform.rotation);
     }
 
     // Update is called once per frame

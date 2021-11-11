@@ -125,6 +125,8 @@ MonoBehaviour:
   - {fileID: 3771270296562223323, guid: 5c18463762823694c91c893d36fc0b7e, type: 3}
   - {fileID: 3771270296562223323, guid: 5c18463762823694c91c893d36fc0b7e, type: 3}
   - {fileID: 3771270296562223323, guid: 5c18463762823694c91c893d36fc0b7e, type: 3}
+  deathEffect: {fileID: 8396872659871031985, guid: 6a2ea2b0ec0699e4baf6ab19b2f156e3, type: 3}
+  deathSound: {fileID: 8350592343110171675, guid: ee55a6737d743314c8d6f7695dd54220, type: 3}
   stopDistance: 10
   attackSpeed: 8
 --- !u!1 &2168764152520950355
