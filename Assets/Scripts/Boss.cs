@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -12,19 +13,33 @@ public class Boss : MonoBehaviour
     private Animator _animator;
     public int damage;
     public GameObject deathEffect;
+    private Slider healthBar;
     private void Start()
     {
         halfHealth = health / 2;
         _animator = GetComponent<Animator>();
+        healthBar = FindObjectOfType<Slider>();
+        healthBar.maxValue = health;
+        healthBar.value = health;
+
+        Debug.Log(healthBar.value);
+        Debug.Log(healthBar.maxValue);
+        Debug.Log("Already printed values from healt bar");
+
     }
     public void takeDamage(int damageAmount)
     {
+
+        Debug.Log(healthBar.value);
+        Debug.Log(healthBar.maxValue);
         health -= damageAmount;
+        healthBar.value = health;
         if (health <= 0)
         {
             Debug.Log("wasted");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            healthBar.gameObject.SetActive(false);
         }
 
         if (health <= halfHealth)
